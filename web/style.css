@@ -1,0 +1,64 @@
+#secret {
+    width: 100%;
+    display: none;
+}
+.sample {
+    width: 100%;
+    height: 100px;
+}
+.row {
+    margin-bottom: 20px;
+}
+
+.clone {
+    float: right;
+}
+
+body {
+    transition: background-color 1s ease-out;
+}
+
+.editing-panel {
+    padding: 10px 0 10px 0;
+    position: fixed;
+    top: 20%;
+    width: 400px;
+    background-color: rgba(100, 255, 155, 0.9);
+    text-align: center;
+    display: none;
+} 
+
+.editing-panel input {
+    margin: 5px;
+}
+.editing-panel button {
+    margin-left: 5px;
+}
+.editing-panel .form-control {
+    width: 80%;
+}
+.fileInput {
+    height: 50px;
+    background-color: green;
+}
+.audio-loading {
+    background-color: blue;
+}
+button[disabled] {
+    background-color: grey !important;
+}
+.audio-playing {
+    animation: blink 1s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+    transition: none;
+}
+@keyframes blink {
+    to {
+        background-color: red;
+    }
+}
+@-webkit-keyframes blink {
+    to {
+        background-color: red;
+    }
+}

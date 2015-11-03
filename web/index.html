@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ksdt | drdj</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/waves.min.css">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+   <div class="container">
+       <canvas id="dbmeter" height=50 width='100%'></canvas>
+       <div class="row row-1">
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+       </div>
+       <div class="row row-2">
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+       </div>
+       <div class="row row-3">
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+       </div>
+       <div class="row row-4">
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+       </div>
+       <div class="row row-5">
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+           <div class="col-sm-2"><button class="btn btn-default sample"></button></div>
+       </div>
+       <div class="row row-edit">
+           <div class="col-sm-1">
+               <button class="btn btn-default edit-mode">enable edit mode</button>
+           </div>
+           <div class="col-sm-4 col-sm-offset-2">
+               <input type="text" id="secret" placeholder="secret (required for editing main)">
+           </div>
+       </div>
+       <div class="editing-panel">
+            <form id="editform" enctype="multipart/form-data">
+                <input type="text" name="name" class="form-control" id="name" placeholder="name">
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="btn-default">
+                        <button type="button" class="btn btn-default"></button>
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="btn-primary">
+                        <button type="button" class="btn btn-primary"></button>
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="btn-success"> 
+                        <button type="button" class="btn btn-success"></button>
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="btn-info"> 
+                        <button type="button" class="btn btn-info"></button>
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="btn-warning"> 
+                        <button type="button" class="btn btn-warning"></button>
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="btn-danger">
+                        <button type="button" class="btn btn-danger"></button>
+                </label>
+                <div id="fileInput">click to select audio file</div>
+                <button type="button" class="btn btn-primary" id="save">save</button><button type="button" class="btn btn-danger" id="cancel">cancel</button>
+                <button type="button" class="btn btn-wanring" id="delete">delete</button>
+            </form> 
+       </div>
+   </div>
+   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <script src="static/dropzone.js"></script>
+   <script src="static/waves.min.js"></script>
+   <script src="static/main.js"></script>
+</body>
+</html>
