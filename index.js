@@ -11,7 +11,7 @@ var storage = multer.diskStorage({
     filename: function (req, file, cb) {
         console.log(req);
         cb(null, req.params.name + '-' + req.params.row + '-' + req.params.col);
-  }
+    }
 });
 
 var fileFilter = function (req, file, cb) {
@@ -22,8 +22,6 @@ var fileFilter = function (req, file, cb) {
 };
 
 var upload = multer({ storage: storage, fileFilter: fileFilter });
-
-
 
 app.use(bodyParser.json());
 

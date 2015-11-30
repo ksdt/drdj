@@ -280,15 +280,17 @@ $(document).ready(function() {
 
             currentEditRow = row;
             currentEditCol = col;
+            console.log("currently editing", currentEditRow, currentEditCol);
 
             if (dz) {
-                dz.url = '/sample/'+pad+'/'+row+'/'+col+'/'+$('#secret').val();
+                dz.options.url = '/sample/'+pad+'/'+row+'/'+col+'/'+$('#secret').val();
                 dz.enable();
                 dz.element.innerHTML = 'click to select audio file';
             } else {
                 dz = new Dropzone('div#fileInput', { url: '/sample/'+pad+'/'+row+'/'+col+'/'+$('#secret').val() });
             }
             dz.on('sending', function(e) {
+                console.log("uploading to", this.options.url);
                 this.element.innerHTML = 'uploading...';
             });
             dz.on('complete', function(file, e) {
