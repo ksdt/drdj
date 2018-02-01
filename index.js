@@ -3,6 +3,7 @@ var express = require('express'),
     multer = require('multer'),
     bodyParser = require('body-parser'),
     fs = require('fs');
+    port = process.env.PORT || 4000;
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -68,4 +69,4 @@ app.use('/static', express.static('web'));
 app.use('/uploads', express.static('uploads'));
 
 
-app.listen(4000);
+app.listen(port);
